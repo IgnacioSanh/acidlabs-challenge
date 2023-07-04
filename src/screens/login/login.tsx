@@ -1,8 +1,16 @@
 import { Box, Image, Button, Heading, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 import avatar from "_assets/avatar.png";
+import { screenNames } from "_types/routes";
 
 export default function Login() {
+	const navigate = useNavigate();
+
+	function onPressLogin() {
+		navigate(screenNames.HOME);
+	}
+
 	return (
 		<Box
 			display="flex"
@@ -36,7 +44,12 @@ export default function Login() {
 					This app was developed by Ignacio Sanhueza as part of a Acid
 					Labs challenge
 				</Text>
-				<Button type="submit" colorScheme="blue" width="100%">
+				<Button
+					type="submit"
+					colorScheme="blue"
+					width="100%"
+					onClick={onPressLogin}
+				>
 					Sign In
 				</Button>
 			</Box>

@@ -25,7 +25,8 @@
 		"paths": {
 			"_assets/*": ["./src/assets/*"],
 			"_components/*": ["./src/components/*"],
-			"_screens/*": ["./src/screens/*"]
+			"_screens/*": ["./src/screens/*"],
+			"_types/*": ["./src/types/*"]
 		}
 	},
 	"include": ["src"],

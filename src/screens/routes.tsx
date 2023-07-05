@@ -1,20 +1,40 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes as Router, Route } from "react-router-dom";
 
 import Login from "_screens/login/login";
-import Home from "_screens/home/home";
-import { screenNames } from "_types/routes";
-
-const router = createBrowserRouter([
-	{
-		path: screenNames.LOGIN,
-		element: <Login />,
-	},
-	{
-		path: screenNames.HOME,
-		element: <Home />,
-	},
-]);
+import Jokes from "./jokes/jokes";
+import JokesDetail from "./jokes/jokesDetail";
+import { ProtectedRoute } from "_hoc/index";
 
 export default function Routes() {
-	return <RouterProvider router={router} />;
+	return (
+		<>
+			<Router>
+				<Route
+					path="/"
+					element={
+						<ProtectedRoute>
+							<Jokes />
+						</ProtectedRoute>
+					}
+				/>
+				<Route path="/login" element={<Login />} />
+				<Route
+					path="/jokes"
+					element={
+						<ProtectedRoute>
+							<Jokes />
+						</ProtectedRoute>
+					}
+				/>
+				<Route
+					path="/jokes/:id"
+					element={
+						<ProtectedRoute>
+							<JokesDetail />
+						</ProtectedRoute>
+					}
+				/>
+			</Router>
+		</>
+	);
 }

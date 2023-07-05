@@ -9,8 +9,12 @@ export default defineConfig({
 		alias: {
 			_assets: path.resolve(__dirname, "./src/assets"),
 			_components: path.resolve(__dirname, "./src/components"),
+			_hoc: path.resolve(__dirname, "./src/HOC"),
+			_mocks: path.resolve(__dirname, "./src/mocks"),
+			_services: path.resolve(__dirname, "./src/services"),
 			_screens: path.resolve(__dirname, "./src/screens"),
 			_types: path.resolve(__dirname, "./src/types"),
+			_utils: path.resolve(__dirname, "./src/utils"),
 		},
 	},
 });

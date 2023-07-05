@@ -25,8 +25,12 @@
 		"paths": {
 			"_assets/*": ["./src/assets/*"],
 			"_components/*": ["./src/components/*"],
+			"_hoc/*": ["./src/HOC/*"],
+			"_mocks/*": ["./src/mocks/*"],
+			"_services/*": ["./src/services/*"],
 			"_screens/*": ["./src/screens/*"],
-			"_types/*": ["./src/types/*"]
+			"_types/*": ["./src/types/*"],
+			"_utils/*": ["./src/utils/*"]
 		}
 	},
 	"include": ["src"],
